@@ -144,10 +144,6 @@ def setup_logging(args):
     '''
     Validate user args
     '''
-    if args.nologfile and args.loglevelfile:
-        raise Exception("""Incompatable args: --loglevelfile
-                        and --nologfile. --loglevelfile is
-                        only for if you want a logfile.""")
     if args.stderr and not will_have_console_output:
         raise Exception("""Incompatable args: --stderr and
                         --noconsole. (Can't suppress console logs and
